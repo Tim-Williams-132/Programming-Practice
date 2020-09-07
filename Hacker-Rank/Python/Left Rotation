@@ -1,0 +1,21 @@
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    nd = input().split()
+
+    num = int(nd[0])
+
+    left_rotations = int(nd[1])
+
+    arr = list(map(int, input().rstrip().split()))
+
+    for _ in range(left_rotations):
+        arr.append(arr.pop(0))
+    
+    print(' '.join(list(map(str, arr))))
